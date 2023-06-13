@@ -1,11 +1,29 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
+这个项目实现了管理员与普通用户不同页面的登录管理，提供了2个账号进行试验
+管理员账号：admin 密码：111111
+普通用户账号：user1 密码：111111
+##### 功能介绍：
+用户登录后可以在首页查询要获取的图片
+用户可以提交图片作品
+管理员可以对用户提交的图片进行审核，可以删除用户
+##### 文件介绍
+你可以在redux文件夹中进行reducer和store的管理
+router/IndexRouter.js判断了登录状态，是否进入系统的路由管理
+pagesndox/user-manage/NewSandbox.js设置了系统内各界面的路由管理，并进行懒加载优化
+上述文件描述了页面的大体结构
+###### 如果有自定义侧边栏需求，可以在components/SideMenu.js文件中设置adminList和nomalList列表内容
+### before start you should install:
+    "antd": "^5.5.2",
+    "echarts": "^5.4.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.7",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
+    "redux-persist": "^6.0.0",
+详见package.json
 ### `npm start`
 
 Runs the app in the development mode.\
