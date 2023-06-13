@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+#root,.ant-layout{
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+    line-height: 40px;
+    color:white;
+    background-color: rgb(22, 221, 55);
+    font-size: 18px;
+    margin: 10px;
+    text-align: center;
+}
+.del-btn{
+    color: rgba(37, 243, 14, 0.862);
+}
+.register{
+    height: 300px;
+    width: 450px;
+    position: relative;
+    left: 30%;
+    margin-top: 200px;
+    border-radius: 6%;
+    border: 3px rgb(52, 244, 27) solid;
+    padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.home{
+    position: relative;
+}
+.search{
+    margin-left: 35%;
+    margin-bottom: 5px;
+    color: rgb(131, 255, 127);
+}
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    overflow: auto;
+    height: 72vh;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .image-gallery div {
+    width: calc(33.33% - 1%);
+    margin-bottom: 2%;
   }
-  to {
-    transform: rotate(360deg);
+  .upload-list-inline .ant-upload-list-item {
+    float: left;
+    width: 200px;
+    margin-inline-end: 8px;
   }
-}
+  
+  .ant-upload-rtl.upload-list-inline .ant-upload-list-item {
+    float: right;
+  }
+  
+  .upload-btn{
+     width: 100px;
+     height: 50px;
+     background-color: rgb(131, 255, 127);
+  }
+  .chose-image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chose-image span{
+    width: calc(33.33% - 1%);
+    margin-bottom: 2%;
+  }
+  .active{
+    color:rgb(89, 255, 0);
+    border-bottom: 4px rgb(131, 255, 127) solid;
+  }
+  .hidden{
+    display: none;
+  }
+  .imgstate-list{
+    display: flex;
+    margin-left: 30%;
+    margin-bottom: 10px;
+  }
+  .next-list{
+  position: fixed;
+  bottom: 40px; /* 距离底部 20px */
+  right: 40px; /* 距离右侧 20px */
+  }
